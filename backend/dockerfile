@@ -5,5 +5,5 @@ RUN mkdir /opt/server
 WORKDIR /opt/server
 # COPY  package.json . 
 COPY *.js .
-RUN npm install
+RUN npm cache clean --force && npm
 CMD ["node","index.js"]
